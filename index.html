@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Henko Pole Dance</title>
+
+<style>
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background: #0b0b0b;
+color: white;
+scroll-behavior: smooth;
+}
+
+/* Menu */
+
+.menu {
+background-color: black;
+padding: 15px;
+text-align: center;
+border-bottom: 2px solid #c40000;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.menu button {
+background-color: transparent;
+color: white;
+border: 1px solid #c40000;
+padding: 12px 20px;
+margin: 5px;
+cursor: pointer;
+border-radius: 25px;
+font-size: 16px;
+transition: 0.3s;
+}
+
+.menu button:hover {
+background-color: #c40000;
+}
+
+/* Banner */
+
+.banner {
+height: 500px;
+background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a');
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-attachment: fixed;
+}
+
+.banner h1 {
+font-size: 60px;
+margin: 0;
+}
+
+.banner span {
+color: red;
+}
+
+.banner p {
+font-size: 20px;
+color: #ddd;
+}
+
+/* Secciones */
+
+.seccion {
+padding: 50px 20px;
+text-align: center;
+animation: fade 0.6s ease;
+}
+
+@keyframes fade {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Tabla horarios */
+
+table {
+width: 95%;
+margin: auto;
+border-collapse: collapse;
+background-color: #111;
+}
+
+th, td {
+border: 1px solid #333;
+padding: 15px;
+text-align: center;
+}
+
+th {
+background-color: #c40000;
+}
+
+td:hover {
+background-color: #1c1c1c;
+cursor: pointer;
+}
+
+/* Imagenes */
+
+.imagenes {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+}
+
+.imagenes img {
+width: 280px;
+height: 360px;
+object-fit: cover;
+border-radius: 14px;
+transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+filter: brightness(0.9);
+}
+
+.imagenes img:hover {
+transform: scale(1.08);
+box-shadow: 0 10px 25px rgba(255,0,0,0.4);
+filter: brightness(1.1);
+}
+
+/* Logo */
+
+.logo {
+font-size: 50px;
+font-weight: bold;
+letter-spacing: 5px;
+}
+
+.logo span {
+color: red;
+position: relative;
+}
+
+.logo span::after {
+content: "🧍‍♀️";
+position: absolute;
+top: -35px;
+left: 8px;
+font-size: 20px;
+}
+
+.texto {
+max-width: 900px;
+margin: auto;
+line-height: 1.7;
+color: #ccc;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu">
+<button onclick="mostrar('inicio')">Inicio</button>
+<button onclick="mostrar('horarios')">Horarios</button>
+<button onclick="mostrar('quienes')">Quiénes Somos</button>
+<button onclick="mostrar('contacto')">Contacto</button>
+</div>
+
+<!-- Banner -->
+
+<div class="banner">
+
+<div class="logo">
+HEN<span>K</span>O
+</div>
+
+<p>Academia Deportiva & Artística de Pole Dance</p>
+
+</div>
+
+<!-- Inicio -->
+
+<div id="inicio" class="seccion">
+
+<h2>Entrena Fuerza · Arte · Confianza</h2>
+
+<div class="imagenes">
+
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
+<img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
+<img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a">
+<img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a">
+
+</div>
+
+</div>
+
+<!-- Horarios -->
+
+<div id="horarios" class="seccion" style="display:none">
+
+<h2>Horarios</h2>
+
+<table>
+
+<tr>
+<th>Horario</th>
+<th>Lunes</th>
+<th>Martes</th>
+<th>Miércoles</th>
+<th>Jueves</th>
+<th>Viernes</th>
+</tr>
+
+<tr>
+<td>18:00</td>
+<td>Inicial</td>
+<td>Flexibilidad</td>
+<td>Inicial</td>
+<td>Intermedio</td>
+<td>Libre</td>
+</tr>
+
+<tr>
+<td>19:00</td>
+<td>Intermedio</td>
+<td>Inicial</td>
+<td>Avanzado</td>
+<td>Inicial</td>
+<td>Flexibilidad</td>
+</tr>
+
+<tr>
+<td>20:00</td>
+<td>Flexibilidad</td>
+<td>Avanzado</td>
+<td>Intermedio</td>
+<td>Avanzado</td>
+<td>Inicial</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- Quienes somos -->
+
+<div id="quienes" class="seccion" style="display:none">
+
+<h2>Quiénes Somos</h2>
+
+<div class="texto">
+
+<p>
+Henko combina el deporte y el arte del Pole Dance creando un espacio moderno
+y profesional para el desarrollo físico y creativo.
+</p>
+
+<p>
+Nuestros profesores cuentan con experiencia en entrenamiento funcional,
+flexibilidad y técnica avanzada.
+</p>
+
+<p>
+Trabajamos en un ambiente motivador, inclusivo y profesional.
+</p>
+
+</div>
+
+<div class="imagenes">
+
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b">
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+
+</div>
+
+</div>
+
+<!-- Contacto -->
+
+<div id="contacto" class="seccion" style="display:none">
+
+<h2>Contacto</h2>
+
+<p>WhatsApp: 099 000 000</p>
+<p>Instagram: @henko</p>
+<p>Montevideo - Uruguay</p>
+
+</div>
+
+<script>
+
+function mostrar(seccion) {
+
+document.getElementById("inicio").style.display = "none";
+document.getElementById("horarios").style.display = "none";
+document.getElementById("quienes").style.display = "none";
+document.getElementById("contacto").style.display = "none";
+
+document.getElementById(seccion).style.display = "block";
+
+window.scrollTo(0,0);
+
+}
+
+</script>
+
+</body>
+
+</html>
+
+
